@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Morse Code Translator</title>
+
+  
+  <link rel="stylesheet" href="./css/main.css" />
+
+  
+  <script type="module" src="./scripts/script.js" defer></script>
+
+</head>
+
+<body>
+  <main class="translator">
+
+
+    <header class="translator__header">
+      <h1>Morse Code Translator</h1>
+      <p>Translate English ↔ Morse Code instantly</p>
+    </header>
+
+
+    <section class="translator__input-section">
+      <label for="inputText">Input</label>
+      <textarea
+        id="inputText"
+        class="translator__input"
+        placeholder="Type English or Morse code here..."
+      ></textarea>
+    </section>
+
+  
+    <section class="translator__buttons">
+      <button id="toMorseBtn">Translate to Morse</button>
+      <button id="toEnglishBtn">Translate to English</button>
+      <button id="clearBtn">Clear</button>
+    </section>
+
+
+    <section class="translator__output-section">
+      <label for="outputText">Output</label>
+      <textarea
+        id="outputText"
+        class="translator__output"
+        readonly
+        placeholder="Result will appear here..."
+      ></textarea>
+    </section>
+
+  </main>
+
+
+</body>
+</html>
