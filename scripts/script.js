@@ -1,6 +1,6 @@
 import {
   translateToMorse,
-  translateToEnglish
+  translateToEnglish,translateAuto
 } from "./translator.js";
 
 // Elements
@@ -10,14 +10,15 @@ const outputText = document.getElementById("outputText");
 const toMorseBtn = document.getElementById("toMorseBtn");
 const toEnglishBtn = document.getElementById("toEnglishBtn");
 const clearBtn = document.getElementById("clearBtn");
+const autoBtn = document.getElementById("autoBtn");
 
-// English → Morse
+// English to Morse
 toMorseBtn.addEventListener("click", () => {
   const input = inputText.value;
   outputText.value = translateToMorse(input);
 });
 
-// Morse → English
+// Morse to English
 toEnglishBtn.addEventListener("click", () => {
   const input = inputText.value;
   outputText.value = translateToEnglish(input);
@@ -27,4 +28,10 @@ toEnglishBtn.addEventListener("click", () => {
 clearBtn.addEventListener("click", () => {
   inputText.value = "";
   outputText.value = "";
+});
+
+// Auto Detect
+autoBtn.addEventListener("click", () => {
+  const input = inputText.value;
+  outputText.value = translateAuto(input);
 });

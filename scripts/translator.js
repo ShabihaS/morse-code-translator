@@ -1,15 +1,20 @@
 import { morseDictionary } from "./dictionary.js";
 
-//English to Morse
- 
+// English to Morse
 export function translateToMorse(text) {
   return text
     .toLowerCase()
-    .split("")
-    .map((char) => morseDictionary[char] ?? "")
-    .join(" ")
-    .replace(/\s+/g, " ")
-    .trim();
+    .trim()
+    .split(" ")
+    .filter(word => word.length > 0) 
+    .map(word =>
+      word
+        .split("")
+        .map(char => morseDictionary[char] ?? "")
+        .join(" ")
+        .trim() 
+    )
+    .join(" / ");
 }
 
 /* Morse to English
@@ -25,11 +30,28 @@ export function translateToEnglish(morse) {
   return morse
     .trim()
     .split(" / ")
+    .filter(word => word.length > 0) 
     .map((word) =>
       word
         .split(" ")
+        .filter(code => code.length > 0) 
         .map((code) => reverseDictionary[code] ?? "")
         .join("")
     )
     .join(" ");
+}
+
+//Auto Translator
+export function translateAuto(text) {
+  const cleaned = text.trim();
+
+  if (isMorse(cleaned)) {
+    return translateToEnglish(cleaned);
+  } else {
+    return translateToMorse(cleaned);
+  }
+}
+
+function isMorse(text) {
+  return /^[.\-\s/]+$/.test(text);
 }
