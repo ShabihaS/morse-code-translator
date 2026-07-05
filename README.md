@@ -1,22 +1,22 @@
-# 🌐 Morse Code Translator
+# Morse Code Translator
 
 A simple and responsive web app that translates between **English text and Morse code**.  
 It also includes an **auto-detect feature** that automatically identifies the input language and converts it accordingly.
 
 ---
 
-## 🚀 Features
+## Features
 
-- 🔤 Translate English → Morse Code
-- 📡 Translate Morse Code → English
-- 🤖 Auto-detect input language
-- 🧹 Handles extra spaces and formatting issues
-- 🧪 Unit tested with Jest
-- 🎨 Clean neon-glass UI (responsive design)
+-  Translate English → Morse Code
+-  Translate Morse Code → English
+-  Auto-detect input language
+-  Handles extra spaces and formatting issues
+-  Unit tested with Jest
+-  Clean neon-glass UI (responsive design)
 
 ---
 
-## 🖥️ Demo
+##  Demo
 
 Type text or Morse code in the input box and click:
 
@@ -24,16 +24,10 @@ Type text or Morse code in the input box and click:
 - “Translate to English”
 - “Auto Detect”
 
----
+##  Project Structure
 
-## 📸 UI Preview
+```text
 
-*(Add screenshot here if needed)*
-
----
-
-## 📂 Project Structure
-.
 ├── index.html
 ├── css/
 │   └── main.scss
@@ -53,8 +47,13 @@ Type text or Morse code in the input box and click:
 │   └── _media.scss
 
 └── README.md
+```
 
-## ⚙️ How It Works
+
+
+
+
+##  How It Works
 
 ### English → Morse
 Each letter is converted using a dictionary and separated by spaces.  
@@ -65,7 +64,7 @@ Morse code is split by `/` for words and spaces for letters.
 
 ---
 
-## 🤖 Auto Detect Feature
+##  Auto Detect Feature
 
 The app automatically detects input type:
 
@@ -74,7 +73,7 @@ The app automatically detects input type:
 
 ---
 
-## 🧪 Testing
+##  Testing
 
 This project uses **Jest** for unit testing.
 
@@ -87,11 +86,11 @@ Tests include:
 English → Morse conversion
 Morse → English conversion
 Word separation handling
-🧠 Edge Cases Handled
+ Edge Cases Handled
 Extra spaces between words
 Invalid characters (ignored or safely handled)
 Empty input
-🛠️ Technologies Used
+ Technologies Used
 HTML5
 SCSS (BEM structure)
 JavaScript (ES Modules)

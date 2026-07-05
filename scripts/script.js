@@ -15,6 +15,7 @@ const autoBtn = document.getElementById("autoBtn");
 // English to Morse
 toMorseBtn.addEventListener("click", () => {
   const input = inputText.value;
+  
   outputText.value = translateToMorse(input);
 });
 
