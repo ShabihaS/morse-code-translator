@@ -15,13 +15,20 @@ const autoBtn = document.getElementById("autoBtn");
 // English to Morse
 toMorseBtn.addEventListener("click", () => {
   const input = inputText.value;
-  
+  if (input=="") {
+    alert( "Please enter some text to translate.");
+    return;
+  }
   outputText.value = translateToMorse(input);
 });
 
 // Morse to English
 toEnglishBtn.addEventListener("click", () => {
   const input = inputText.value;
+  if (input=="") {
+    alert( "Please enter some text to translate.");
+    return;
+  }
   outputText.value = translateToEnglish(input);
 });
 
@@ -33,6 +40,9 @@ clearBtn.addEventListener("click", () => {
 
 // Auto Detect
 autoBtn.addEventListener("click", () => {
-  const input = inputText.value;
+  const input = inputText.value;if (input=="") {
+    alert( "Please enter some text to translate.");
+    return;
+  }
   outputText.value = translateAuto(input);
 });
